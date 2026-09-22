@@ -8,8 +8,7 @@ A cada partición he decidido darle un tamaño de 600MB debido a que la imagen d
 He elegido el ext4 como sistema de archivos para el RAID1 debido a que es mas moder rápido y eficiente debido a que proteje los datos en fallos repentinos.
 
 Para el tamaño el /root de VL he decidido darle un tamaño de 7GB debido a que hay que darle la mayor parte del espacio a /root.
-El tamaño de /home le he dado 1GB 
-Y para el tamaño de swap le he dado 200MB debido a que no quiero desaprovechar RAM.
+El tamaño de /home le he dado 1GB, y para el tamaño de swap le he dado 200MB debido a que no quiero desaprovechar RAM.
 
 <img width="960" height="1079" alt="Particion-RAID1-Cifrado" src="https://github.com/user-attachments/assets/15788b8d-128b-4596-aaf3-29569ebf2dc2" />
 
