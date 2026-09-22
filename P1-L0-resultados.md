@@ -11,6 +11,8 @@ Para el tamaño el /root de VL he decidido darle un tamaño de 7GB debido a que 
 El tamaño de /home le he dado 1GB 
 Y para el tamaño de swap le he dado 200MB debido a que no quiero desaprovechar RAM.
 
+<img width="960" height="1079" alt="Particion-RAID1-Cifrado" src="https://github.com/user-attachments/assets/15788b8d-128b-4596-aaf3-29569ebf2dc2" />
+
 A lo largo de esta practica he tenido una serie de inconvenientes con el gestor de descargas que no me ha dejado completar al principio la instalación y el montaje de las particiones. 
 He logrado solucionar este inconveniente volviendo ha hacer el montaje de cero con la interfaz grafica, ya que me ha dejado montarlo con éxito.
 A continuaciòn le dejo la imagen del lsblk para ver como he realizado la practica.
