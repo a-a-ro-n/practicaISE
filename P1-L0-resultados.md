@@ -15,6 +15,9 @@ Y para el tamaño de swap le he dado 200MB debido a que no quiero desaprovechar 
 
 A lo largo de esta practica he tenido una serie de inconvenientes con el gestor de descargas que no me ha dejado completar al principio la instalación y el montaje de las particiones. 
 He logrado solucionar este inconveniente volviendo ha hacer el montaje de cero con la interfaz grafica, ya que me ha dejado montarlo con éxito.
+
+Es por esto que los datos que aparecen en la foto anterior no concuerdan con las cifras que aparecen en la explicacion ni en la imagen de abajo. Ya que he optado por darle un poco mas de memoria a los modulos por si el error hubiera sido ese.
+
 A continuaciòn le dejo la imagen del lsblk para ver como he realizado la practica.
 
 <img width="957" height="1079" alt="lsblk" src="https://github.com/user-attachments/assets/38cfa9da-3b8b-42b6-bd0b-735ea6f5b085" />
