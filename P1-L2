@@ -1,0 +1,21 @@
+En esta lección debemos de agregarle un disco nuevo para poder hacer un sdb que gestione y enlace con el cl que hay por defecto en el sistema y añadir el /var
+Para esto el tamaño del disco nuevo le he dado 4GB
+
+
+
+Para realizar la partición hemos usado el comando fdisk
+fdisk /dev/sdb usando n para crear la partición sdb1 y w para guardar la tabla de particiones
+
+Tras hacer nuestro pv tenemos que estenderlo hacia el vg almalinux usando el comando vgextend almalinux /dev/sdb1
+Creamos un nuevo var en lv new_var con un tamaño de 3GB usando lvcreate -n new_var -L 3G almalinux
+
+Para hacer una copia de los archivos para pasarlos al new_var usamos el mount,
+mkfs con ext4 formateando con mkfs -t ext4 /dev/almalinux/new_var, 
+creando la carpeta /new_var y montándolo con mount /dev/almalinux/new_var /new_var
+
+Copiamos los datos de forma atomica pasando primero a modo rescate con systemctl isolate rescue para que no se escriba en /var
+durante el proceso y luego hacemos la copia con cp -a /var/. /new_var/.   
+
+Para indicarle al SO donde se ubica el nuevo /var modificamos /etc/fstab añadiendo /dev/mapper/almalinux-new_var /var ext4 defaults 0 0
+Para liberar el espacio del antiguo /var en la raíz, comentamos la línea en /etc/fstab, desmontamos con umount /new_var
+movemos con mv /var /var_old, volvemos a crear mkdir /var, descomentamos la línea de /etc/fstab y volvemos a montar todo con mount -a
