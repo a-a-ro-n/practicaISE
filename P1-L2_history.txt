@@ -1,0 +1,65 @@
+...
+lsblk
+lsblk | grep disk
+clear
+fdisk /dev/sdb
+lsblk
+pvdisplay
+pvs
+pvcreate /dev/sdb1
+pvs
+vgs
+vgextend almalinux /dev/sdb1
+vgs
+vgdisplay
+lvs
+lvcreate -n new_var -L 3GB almalinux
+lvdisplay
+clear
+mkdir /new_var
+mkfs -t est4 /dev/almalinux/new_var
+mkfs -t ext4 /dev/almalinux/new_var
+mount /dev/mapper/almalinux-new_var
+mkfs -t ext4 /dev/almalinux/new_var /new_var/
+mkfs -t ext4 /dev/almalinux/new_var
+mkdir -p /new_var/
+mkdir -p /new_var
+mount /dev/almalinux/new_var /new_var/
+mount
+clear
+systemctl isolate rescue
+systemctl isolate rescue
+clear
+systemctl isolate rescue
+systemtlcsystemctl reboot
+reboot
+systemctl status
+clear
+systemctl isolate rescue
+clear
+vi /etc/fstab
+mount
+vi /etc/fstab
+mount
+umont /new_var/
+umount /new_var/
+mount -a
+vi /etc/fstab
+mount
+mount -a
+lsblk
+umount /dev/almalinux/new_var
+lsblk
+cd etc
+cd /etc
+vi /etc/fstab
+cp -a /var/. /var_old
+mount -a
+mkdir /var
+ls / -l
+restorecon /var
+mount -a
+clear
+cd
+clear
+history > P1-L2_history.txt
