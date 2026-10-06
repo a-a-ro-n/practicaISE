@@ -1,0 +1,39 @@
+lsblk
+fdisk /dev/sdb
+lsblk
+fdisk /dev/sdc
+lsblk
+dnf install mdadm
+man mdadm
+mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb1 /dev/sdc1
+lsblk
+ls /dev/
+pvcreate /dev/md0
+pvdisplay
+pvs
+vgcreate vg_raid1 /dev/md0
+lsblk
+vgs
+vgdisplay
+lvcreate -n new_var -L 1.99GB vg_raid1
+vgs
+ls
+lvs
+dnf install cryptsetup
+cryptsetup luksFormat /dev/vg_raid1/new_var
+cryptsetup luksOpen /dev/vg_raid1/new_var vg_raid1-lv_crypt
+mkfs -t ext4 /dev/mapper/vg_raid1-lv_crypt
+mkdir /new_var
+mount /dev/mapper/vg_raid1-lv_crypt /new_var/
+systemctl isolate rescue.target
+systemctl status
+cp -a /var/. /new_var/
+ls -laZ /new_var/
+vi /etc/fstab
+blkid | grep crypt
+blkid | grep crypto_LUKS
+blkid | grep crypto_LUKS > /etc/crypttab
+vi /etc/crypttab
+vi /etc/fstab
+reboot
+lsblk
