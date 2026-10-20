@@ -1,0 +1,119 @@
+107  dnf provides semanage
+108  dnf install policycoreutils-python-utils-3.10-2.el10_2.noarch
+109  semanage
+110  clear
+111  semanage port -l
+112  semanage port -l | grep ssh
+113  semanage port -a -t ssh_port_t -p tcp 22022
+114  semanage port -l | grep ssh
+115  systemctl restart sshd
+116  systemctl restarts fail2ban
+117  systemctl restart fail2ban
+118  systemctl status fail2ban
+119  fail2ban-client
+120  fail2ban-client status
+121  fail2ban-client status sshd
+122  clear
+123  fail2ban-client status
+124  ip a
+125  fail2ban-client status
+126  dnf install iptables
+127  fail2ban-client status
+128  iptables -L
+129  vi fail2ban.local
+130  vi jail.local
+131  clear
+132  systemctl restart fail2ban
+133  systemctl status fail2ban
+134  clear
+135  dnf install httpd
+136  cd ..
+137  cd ..
+138  cd ~
+139  clear
+140  systemctl status httpd
+141  curl http://localhost
+142  systemctl start httpd
+143  systemctl enable httpd
+144  systemctl status httpd
+145  curl http://localhost
+146  firewall-cmd --add-port=80/tcp
+147  firewall-cmd --add-port=80/tcp --permanent
+148  vi /etc/httpd/conf
+149  vi /etc/httpd/conf/httpd.conf
+150  clear
+151  dnf search sql
+152  dnf install maradb11.8.x86_64
+153  dnf install mariadb11.8.x86_64
+154  systemctl status matiadb
+155  systemctl status mariadb
+156  
+157  dnf search maradb-server
+158  dnf search mariadb-server
+159  dnf install mariadb-server
+160  dnf install mariadb-server.x86-64
+161  dnf install mariadb-server.x86_64
+162  dnf uninstall mariadb11.8.x86_64
+163  dnf uinstall mariadb11.8.x86_64
+164  dnf remove mariadb11.8.x86_64
+165  dnf install mariadb-server.x86_64
+166  systemctl status mariadb
+167  sql mariadb_secure_installation
+168  mariadb_secure_installation
+169  clear
+170  dnf install httpd php mariadb mariadb-server php-mysqlnd
+171  systemctl status httpd
+172  ip a
+173  curl 127.0.0.1
+174  firewall-cmd --add-port=80/tcp --permanent
+175  firewall-cmd reload
+176  firewall-cmd --reload
+177  php -a
+178  clear
+179  systemctl mariadb
+180  systemctl status mariadb
+181  mysql -u root
+182  clear
+183  systemctl status mariadb
+184  systemctl start mariadb
+185  systemctl status mariadb
+186  systemctl enacle mariadb
+187  systemctl enable mariadb
+188  clear
+189  systemctl status mariadb
+190  systemctl restart mariadb
+191  systemctl status mariadb
+192  mysql -u root
+193  mysql -u root
+194  clear
+195  mysql_secur_installation
+196  mysql_secure_installation
+197  .?mysql_secure_installation
+198  ./mysql_secure_installation
+199  clear
+200  
+201  mysql_secure_installation
+202  mysql -u root -p
+203  vi /etc/httpd/conf/httpd.conf
+204  systemctl restart http
+205  systemctl restart httpd
+206  systemctl status httpd
+207  vi /var/www/html/index.php
+208  mysql -u root -p
+209  ip a
+210  vi /var/www/html/index.php
+211  systemctl status httpd
+212  systemctl status mariadb
+213  systemctl status php
+214  systemctl status phpd
+215  clear
+216  systemctl reload
+217  systemctl reload all
+218  clear
+219  getsebool -a | grep httpd
+220  setsebool -P httpd_can_network_connect_db=on
+221  getsebool -a | grep httpd
+222  systemctl restart httpd
+223  clear
+224  history
+225  history > hystory.txt
