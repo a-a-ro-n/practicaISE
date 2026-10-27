@@ -1,0 +1,103 @@
+1  clear
+2  git init mirepo
+3  cd mirepo/
+4  ls -la
+5  ls -la .git
+6  vi ~/.gitconfig
+7  touch libro.txt
+8  git status
+9  git add libro.txt
+10 git status
+11 git commit -m "Creacion del archivo libro.txt"
+12 git status
+13 git log
+14 git log --graph
+15 gitk
+16 dnf
+17 dnf search gitk
+18 sudo dnf install gitk
+19 gitk
+20 clear
+21 cat passwrd
+22 cat > password
+23 git status
+24 vi .gitignore
+25 git status
+26 cat .gitignore
+27 ll
+28 vi libro.txt
+29 git diff
+30 git add libro.txt
+31 vi libro.txt
+32 git diff
+33 git diff HEAD
+34 git diff --staged
+35 git diff
+36 git add libro.txt
+37 git diff
+38 git diff HEAD
+39 git diff --staged
+40 git add libro.txt
+41 git commit -m "añadimos el titulo y subtitulo"
+42 git log --graph
+43 git checkout -b cap1
+44 git branch
+45 vi libro.txt
+46 git commit -am
+47 git commit -am "Empezamos el cap1"
+48 vi libro.txt
+49 git commit -am "agregamos contenido a Cap1"
+50 git log --graph
+51 git checkout main
+52 git checkout master
+53 cat libro.txt
+54 vi libro.txt
+55 git status
+56 git commit -am "agregacion del titulo"
+57 git checkout Cap1
+58 git checkout cap1
+59 git log --graph
+60 git checkout master
+61 git merge cap1
+62 git status
+63 cat libro.txt
+64 git log --graph
+65 git log --graph
+66 git checkout -b cap2
+67 vi libro.txt
+68 git commit -am "Empezamos el cap2"
+69 vi libro.txt
+70 git commit -am "agregamos contenido a Cap2"
+71 git checkout master
+72 vi libro.txt
+73 git commit -am "agregacion subtitulo"
+74 git checkout cap2
+75 git rebase main
+76 git rebase master
+77 git checkout master
+78 git merge cap2
+79 git status
+80 git log --graph
+81 cat libro.txt
+82 git restore --source=f4eea4c65b2dd4c9ec4ce90aa89eb8cdac6dd133 libro.txt
+83 git diff
+84 cat libro.txt
+85 git diff libro.txt
+86 git restore libro.txt
+87 cat libro.txt
+88 git revert f4eea4c65b2dd4c9ec4ce90aa89eb8cdac6dd133
+89 cat libro.txt
+90 vi libro.txt
+91 git add libro.txt
+92 git revert --continue
+93 cat libro.txt
+94 git status --graph
+95 git log --graph
+96 git reset --hard f4eea4c65b2dd4c9ec4ce90aa89eb8cdac6dd133
+97 git reset --hard f4eea4c65b2dd4c9ec4ce90aa89eb8cdac6dd133
+98 git log --graph
+99 git branch
+100 git branch -D cap1
+101 git branch
+102 history
+103 history > history.txt
